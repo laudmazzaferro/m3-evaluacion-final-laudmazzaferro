@@ -2,41 +2,54 @@ import React from 'react';
 import './App.css';
 import { fetchCharapters } from './services/fetchCharapters'
 import CharapterList from './Components/CharapterList'
+import Filters from './Components/Filters'
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      charapters:[]
+    this.state = {
+      charapters: [],
+      userInput: ''
     }
+    this.getUserInput = this.getUserInput.bind(this);
   }
-  componentDidMount(){
+  componentDidMount() {
     this.getCharapters();
   }
-  getCharapters(){
+  getCharapters() {
     fetchCharapters()
-      .then(data =>{
+      .then(data => {
         this.setState({
-          charapters:data.results
+          charapters: data.results
         });
       });
   };
 
- render(){
-  const {charapters}=this.state
-  return (
-    <React.Fragment>
-      <header>hola</header>
-      <h1>Lista de artores</h1>
+  getUserInput(event) {
+    const inputValue = event.currentTarget.value;
+    this.setState({
+      userInput: inputValue
+    })
+
+  }
+
+  render() {
+    const { charapters, userInput } = this.state
+    return (
       <div className="App">
-        <CharapterList 
-        charapters={charapters}
+        <header>hola</header>
+        <h1>Lista de personajes </h1>
+        <Filters
+          userInput={userInput}
+          getUserInput={this.getUserInput}
         />
-        
+        <CharapterList
+          charapters={charapters}
+          userInput={userInput}
+        />
       </div>
-    </React.Fragment>
-  );
- }
+    );
+  }
 }
 
 export default App;
