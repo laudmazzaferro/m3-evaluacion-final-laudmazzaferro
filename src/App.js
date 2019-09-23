@@ -13,19 +13,42 @@ class App extends React.Component {
     this.getCharapters();
   }
   getCharapters(){
-      fetchCharapters()
+    fetchCharapters()
       .then(data =>{
         this.setState({
-        charapters:data.results
+          charapters:data.results
         });
       });
   };
 
  render(){
+  const {charapters}=this.state
   return (
-    <div>
+    <React.Fragment>
       <header>hola</header>
-    </div>
+      <h1>Lista de artores</h1>
+      <div className="App">
+        <ul className="charapterList">
+          {charapters.map(charapter =>{ 
+            return(
+              <li className="charapter" key={charapter.id}>
+
+                <div className="card">
+                  <div className="card__img">
+                    <img src={charapter.image} alt={`Imagen de${charapter.name}`}/>
+                  </div>
+                  <h2 className="card__name">{charapter.name}</h2>
+                  <p className="card__specie">{charapter.species}</p>
+                </div>
+                
+              </li>
+            );
+          })}
+
+        </ul>
+      
+      </div>
+    </React.Fragment>
   );
  }
 }
