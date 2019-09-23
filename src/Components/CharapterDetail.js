@@ -18,7 +18,9 @@ const CharapterDetail = props => {
           <div lassName="detail-charapter-container">
             <h3 className="detail-title">{`${name}`}</h3>
             <ul>
-              <li className="detail-li">{`Status: ${status}`}</li>
+              <li className={`detail-li ${(status === 'Alive') ? '' : 'hidden'}`}>Status: <i class="fas fa-heart"></i> </li>
+              <li className={`detail-li ${(status === 'Dead') ? '' : 'hidden'}`}>Status: <i class="fas fa-skull-crossbones"></i></li>
+              <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>Status: <i class="fas fa-question-circle"></i></li>
               <li className="detail-li">{`Species: ${species}`}</li>
               <li className="detail-li">{`Origin: ${origin.name}`}</li>
               <li className="detail-li">{`Episodes: ${episode.length}`}</li>
