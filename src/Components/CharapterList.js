@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CharapterCard from './CharapterCard';
+import {Link} from 'react-router-dom'
 
 class CharapterList extends React.Component {
   
@@ -13,7 +14,9 @@ class CharapterList extends React.Component {
         .map(charapter => {
           return (
             <li className="charapter" key={charapter.id}>
+              <Link to={`/charapter-detail/${charapter.id}`} >
               <CharapterCard charapter={charapter} />
+              </Link>
             </li>
           );
         })}

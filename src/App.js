@@ -3,6 +3,8 @@ import './App.css';
 import { fetchCharapters } from './services/fetchCharapters'
 import CharapterList from './Components/CharapterList'
 import Filters from './Components/Filters'
+import { Switch, Route } from 'react-router-dom';
+import CharapterDetail from './Components/CharapterDetail';
 
 class App extends React.Component {
   constructor(props) {
@@ -39,14 +41,31 @@ class App extends React.Component {
       <div className="App">
         <header>hola</header>
         <h1>Lista de personajes </h1>
-        <Filters
-          userInput={userInput}
-          getUserInput={this.getUserInput}
-        />
-        <CharapterList
-          charapters={charapters}
-          userInput={userInput}
-        />
+        <Switch>
+          <Route exact path="/" render={() => {
+            return (
+              <div>
+                <Filters
+                  userInput={userInput}
+                  getUserInput={this.getUserInput}
+                />
+                <CharapterList
+                  charapters={charapters}
+                  userInput={userInput}
+                />
+              </div>
+            );
+          }} />
+          <Route path="/charapter-detail/:chapId" render={routerProps => {
+            return (
+              <CharapterDetail
+                routerProps={routerProps}
+                charapters={charapters}
+              />
+            );
+          }}/>
+
+        </Switch>
       </div>
     );
   }
