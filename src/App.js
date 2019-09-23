@@ -41,7 +41,7 @@ class App extends React.Component {
       <div className="App">
         
         <header className="App-header">
-          <h1 className="App-title">Lista de personajes </h1>
+          <h1 className="App-title">L </h1>
         </header>
         <main className="App-main">
         <Switch>
