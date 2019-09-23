@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { fetchCharapters } from './services/fetchCharapters'
 import CharapterList from './Components/CharapterList'
 import Filters from './Components/Filters'
@@ -39,8 +39,11 @@ class App extends React.Component {
     const { charapters, userInput } = this.state
     return (
       <div className="App">
-        <header>hola</header>
-        <h1>Lista de personajes </h1>
+        
+        <header className="App-header">
+          <h1 className="App-title">Lista de personajes </h1>
+        </header>
+        
         <Switch>
           <Route exact path="/" render={() => {
             return (
@@ -56,9 +59,10 @@ class App extends React.Component {
               </div>
             );
           }} />
+
           <Route path="/charapter-detail/:chapId" render={routerProps => {
             return (
-              <CharapterDetail
+              <CharapterDetail 
                 routerProps={routerProps}
                 charapters={charapters}
               />
@@ -66,6 +70,7 @@ class App extends React.Component {
           }}/>
 
         </Switch>
+
       </div>
     );
   }

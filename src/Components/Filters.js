@@ -13,6 +13,7 @@ class Filters extends React.Component {
 }
 
 Filters.propTypes = {
-  charapters: PropTypes.arrayOf(PropTypes.object).isRequired
+  userInput:PropTypes.string.isRequired,
+  getUserInput:PropTypes.func.isRequired
 };
 export default Filters;

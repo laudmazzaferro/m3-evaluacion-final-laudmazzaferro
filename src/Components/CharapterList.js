@@ -9,12 +9,13 @@ class CharapterList extends React.Component {
     const { charapters, userInput } = this.props
     return (
       <ol className="charapterList">
+        
         {charapters
         .filter(charapter => charapter.name.toUpperCase().includes(userInput.toUpperCase()))
         .map(charapter => {
           return (
             <li className="charapter" key={charapter.id}>
-              <Link to={`/charapter-detail/${charapter.id}`} >
+              <Link to={`/charapter-detail/${charapter.id}`} className="charapter-link">
               <CharapterCard charapter={charapter} />
               </Link>
             </li>

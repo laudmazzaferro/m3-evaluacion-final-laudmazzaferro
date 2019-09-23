@@ -18,7 +18,7 @@ class CharapterCard extends React.Component {
 }
 
 CharapterCard.propTypes = {
-  charapters: PropTypes.arrayOf(PropTypes.object).isRequired
+  charapter: PropTypes.object.isRequired
 };
 
 export default CharapterCard;

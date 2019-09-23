@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.App {
+text-align:center;
+background-color:black;
+}
+.App-header{
+    margin: auto 0px auto 0px ;
+}
+.App-title {
+    background-image: url('https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height:1px;
+    padding-top:300px;
+    overflow:hidden;
+    margin: 0px auto 0px auto ;
+    width:400px;
+  }
+.charapterList{
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.charapter{
+    list-style: none;
+}
+.charapter-link{
+    text-decoration: none;
+}
