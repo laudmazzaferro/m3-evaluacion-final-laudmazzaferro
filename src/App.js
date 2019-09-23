@@ -43,7 +43,7 @@ class App extends React.Component {
         <header className="App-header">
           <h1 className="App-title">Lista de personajes </h1>
         </header>
-        
+        <main className="App-main">
         <Switch>
           <Route exact path="/" render={() => {
             return (
@@ -70,7 +70,7 @@ class App extends React.Component {
           }}/>
 
         </Switch>
-
+        </main>
       </div>
     );
   }

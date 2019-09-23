@@ -6,7 +6,7 @@ const CharapterDetail = props => {
     const { routerProps, charapters } = props;
     const chapId = parseInt(routerProps.match.params.chapId);
     const charapter = charapters.filter(item => item.id === chapId);
-    
+
     if (charapter[0]){
       const {name ,image, status, species, origin, episode} = charapter[0];
       return (

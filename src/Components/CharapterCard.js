@@ -6,11 +6,13 @@ class CharapterCard extends React.Component {
     const {charapter}=this.props
     return (
       <div className="card">
-        <div className="card__img">
-          <img src={charapter.image} alt={`Imagen de${charapter.name}`} />
+        <div className="card__img-container">
+          <img src={charapter.image} alt={`Imagen de${charapter.name}`} className="card__img"/>
         </div>
-        <h2 className="card__name">{charapter.name}</h2>
-        <p className="card__specie">{charapter.species}</p>
+        <div className="card__name-specie">
+          <h2 className="card__name">{charapter.name}</h2>
+          <p className="card__specie">{charapter.species}</p>
+        </div>
       </div>
     );
 
