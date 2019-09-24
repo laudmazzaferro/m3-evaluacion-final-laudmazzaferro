@@ -1,4 +1,4 @@
-## Me Final Evaluation - Laura Diaz
+## M3 Final Evaluation - Laura Diaz
 
 Interactive website with list of Rick and Monty characters, It also has an input to search for characters by name.When you click on the card you change the route and you can see the detail of each character, this was possible thanks to react router .
 
