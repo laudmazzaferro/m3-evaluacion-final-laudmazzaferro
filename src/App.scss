@@ -12,6 +12,16 @@
 .App-header{
     margin: auto 0px auto 0px ;
 }
+.App-main-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 20px;
+}
+.App-main-all{
+width: 100vw;
+background-color: black
+}
 .App-title {
     background-image: url('https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png');
     background-repeat: no-repeat;
@@ -29,33 +39,33 @@
     grid-template-columns: auto;
     text-align: center;
     background-color: black;
+    grid-gap: 20px;
     @media all and (min-width:600px) {
-        grid-template-columns: auto auto ; 
+        grid-template-columns: 250px 250px ; 
     }
     @media all and (min-width:800px) {
-        grid-template-columns: auto auto auto; 
+        grid-template-columns: 250px  250px 250px; 
     }
     @media all and (min-width:1200px) {
-        grid-template-columns: auto auto auto auto; 
+        grid-template-columns: 250px 250px 250px 250px; 
     }
 }
 .charapter{
     list-style: none;
     color:white;
+    margin: 0px auto 0px auto;
 }
 .charapter-link{
     text-decoration: none;
     color: white;
+    width: 100%;
 }
 .card{
-    width: 250px;
-    height: 300px;
-    margin: 15px 15px 15px 15px;
-    transition: color ease 0.8s;
+    width: 100%;
+   transition: color ease 0.8s;
         &:hover {
             transform:scale(1.1);
         }
-    //background-color:rgb(98,174,200);
 }
 
 .card__name-specie{
@@ -75,9 +85,6 @@
     background-color: black;
     border:solid 1px rgb(98,174,200);
     color:white;
-    :-webkit-input-placeholder {
-        color: red;
-    }
 }
 
 .App-input-container{
@@ -111,4 +118,3 @@
 .hidden{
     display: none;
 }
-//detail-img

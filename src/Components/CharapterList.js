@@ -8,6 +8,7 @@ class CharapterList extends React.Component {
   render() {
     const { charapters, userInput } = this.props
     return (
+      <div className="App-main-container">
       <ol className="charapterList">
         
         {charapters
@@ -23,6 +24,7 @@ class CharapterList extends React.Component {
         })}
 
       </ol>
+      </div>
 
 
     );

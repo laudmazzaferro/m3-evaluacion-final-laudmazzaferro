@@ -47,7 +47,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" render={() => {
             return (
-              <div>
+              <div className="App-main-all">
                 <Filters
                   userInput={userInput}
                   getUserInput={this.getUserInput}
