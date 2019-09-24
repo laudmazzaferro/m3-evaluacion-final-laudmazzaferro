@@ -12,12 +12,7 @@
 .App-header{
     margin: auto 0px auto 0px ;
 }
-.App-main-container{
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    padding-bottom: 20px;
-}
+
 .App-main-all{
 width: 100vw;
 background-color: black
@@ -28,7 +23,7 @@ background-color: black
     background-position: center;
     background-size: contain;
     height:1px;
-    padding-top:100px;
+    padding-top:150px;
     overflow:hidden;
     margin: 0px auto 20px auto ;
     width: 300px;
@@ -36,107 +31,14 @@ background-color: black
         width:400px; 
     }
   }
-.charapterList{
-    display: grid;
-    list-style: none;
-    grid-template-columns: auto;
-    text-align: center;
-    background-color: black;
-    grid-gap: 20px;
-    @media all and (min-width:600px) {
-        grid-template-columns: 250px 250px ; 
-    }
-    @media all and (min-width:800px) {
-        grid-template-columns: 250px  250px 250px; 
-    }
-    @media all and (min-width:1200px) {
-        grid-template-columns: 250px 250px 250px 250px; 
-    }
-}
-.charapter{
-    list-style: none;
-    color:white;
-    margin: 0px auto 0px auto;
-}
-.charapter-link{
-    text-decoration: none;
-    color: white;
-    width: 100%;
-}
-.card{
-    width: 100%;
-   transition: color ease 0.8s;
-        &:hover {
-            transform:scale(1.1);
-        }
-}
 
-.card__name-specie{
-    background-color: rgb(98,174,200);
-    border-radius: 10px;
-}
-.card__img{
-    width: 250px;
-    border-radius: 15px;
-}
 .App-main{
     margin: 0px auto 0px auto ;
 }
-.App-input{
-    width: 300px ;
-    height: 30px;
-    background-color: black;
-    border:solid 1px rgb(98,174,200);
-    color:white;
-}
 
-.App-input-container{
-    text-align: center;
-    margin-bottom: 20px;
-}
 
-.detail-container{
-    width: 300px;
-    background-color: rgb(98,174,200);
-    margin: 40px auto 0px auto;
-    padding-bottom: 20px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex-direction: column;
-    @media all and (min-width:768px) {
-        flex-direction: row;
-        width: 600px;
-        padding-bottom: 0px;
-    }
-    /*@media all and (min-width:1200px) {
-        flex-direction: row;
-        width: 600px;
-        padding-bottom: 0px;
-    }*/
-}
-.detail-li{
-    list-style: none;
-}
 
-.app__back{
-    position: absolute;
-    right: 0;
-    top:-25px;
-    text-decoration: none;
-    color:white;
-}
-.detail-img-container{
-    margin: 20px;
-}
-.detail-img{
-    width: 250px;
-    border-radius: 10px;
-    @media all and (min-width:768px) {
-        width: 300px;
-    }
-}
-.hidden{
-    display: none;
-}
+
+
+
+

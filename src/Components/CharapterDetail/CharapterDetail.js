@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import './CharapterDetail.scss';
 
 const CharapterDetail = props => {
   const { routerProps, charapters } = props;

@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.scss';
 import { fetchCharapters } from './services/fetchCharapters'
-import CharapterList from './Components/CharapterList'
-import Filters from './Components/Filters'
+import CharapterList from './Components/CharapterList/CharapterList'
+import Filters from './Components/Filters/Filters'
 import { Switch, Route } from 'react-router-dom';
-import CharapterDetail from './Components/CharapterDetail';
+import CharapterDetail from './Components/CharapterDetail/CharapterDetail';
+import Footer from './Components/Footer/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class App extends React.Component {
       <div className="App">
         
         <header className="App-header">
-          <h1 className="App-title">L </h1>
+          <h1 className="App-title">Rick and Monty</h1>
         </header>
         <main className="App-main">
         <Switch>
@@ -71,6 +72,7 @@ class App extends React.Component {
 
         </Switch>
         </main>
+        <Footer/>
       </div>
     );
   }

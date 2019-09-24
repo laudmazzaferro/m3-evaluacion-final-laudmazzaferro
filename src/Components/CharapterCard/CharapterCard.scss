@@ -1,0 +1,15 @@
+.card{
+    width: 100%;
+   transition: color ease 0.8s;
+        &:hover {
+            transform:scale(1.1);
+        }
+}
+.card__name-specie{
+    background-color: rgb(98,174,200);
+    border-radius: 10px;
+}
+.card__img{
+    width: 250px;
+    border-radius: 15px;
+}
