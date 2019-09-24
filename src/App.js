@@ -12,9 +12,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       charapters: [],
-      userInput: ''
+      userInput: '',
+      selectValue:'Todos'
     }
     this.getUserInput = this.getUserInput.bind(this);
+    this.getUserSelect = this.getUserSelect.bind(this);
   }
   componentDidMount() {
     this.getCharapters();
@@ -33,11 +35,16 @@ class App extends React.Component {
     this.setState({
       userInput: inputValue
     })
-
+  }
+  getUserSelect(event){
+    let newSelectValue = event.currentTarget.value;
+    this.setState({
+      selectValue:newSelectValue
+    })
   }
 
   render() {
-    const { charapters, userInput } = this.state
+    const { charapters, userInput ,selectValue} = this.state
     return (
       <div className="App">
         
@@ -52,10 +59,12 @@ class App extends React.Component {
                 <Filters
                   userInput={userInput}
                   getUserInput={this.getUserInput}
+                  getUserSelect={this.getUserSelect}
                 />
                 <CharapterList
                   charapters={charapters}
                   userInput={userInput}
+                  selectValue={selectValue}
                 />
               </div>
             );
