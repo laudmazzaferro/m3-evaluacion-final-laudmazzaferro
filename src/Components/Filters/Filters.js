@@ -4,15 +4,15 @@ import './Filters.scss';
 
 class Filters extends React.Component {
   render() {
-    const { userInput, getUserInput, getUserSelect, getUserRadio, radioValue,  selectValue} = this.props
+    const { userInput, getUserInput, getUserSelect, getUserRadio, radioValue} = this.props
     return (
       <div className="App-input-container">
         <input className="App-input" type="text" value={userInput} onChange={getUserInput} placeholder="Buscar por nombre" />
         <div>
           <label htmlFor="gender" id="gender">Gender:  </label>
-          <select name="gender" id="gender" onChange={getUserSelect} className="select-filter" value={selectValue}>
-            <option value="Todos">All</option>
-            <option value="Male">Male</option>
+          <select name="gender" id="gender" onChange={getUserSelect} className="select-filter" >
+            <option value="Todos" >All</option>
+            <option value="Male" >Male</option>
             <option value="Female" >Female</option>
             <option value="unknown">Unknown</option>
           </select>
@@ -20,7 +20,7 @@ class Filters extends React.Component {
         <div className="radio-container">
         <h3>Specie:</h3>
         <div className="radio-label">
-          <label for="specie1">
+          <label htmlFor="specie1">
             <input onClick={getUserRadio} checked={radioValue==='All'}
               id="specie1"
               type="radio"
@@ -31,7 +31,7 @@ class Filters extends React.Component {
           </label>
         </div>
         <div className="radio-label">
-          <label for="specie2">
+          <label htmlFor="specie2">
             <input onClick={getUserRadio} checked={radioValue==='Human'}
               id="specie2"
               type="radio"
@@ -42,7 +42,7 @@ class Filters extends React.Component {
           </label>
         </div>
         <div className="radio-label">
-          <label for="specie3">
+          <label htmlFor="specie3">
             <input onClick={getUserRadio} checked={radioValue==='Alien'}
               id="specie3"
               type="radio"
