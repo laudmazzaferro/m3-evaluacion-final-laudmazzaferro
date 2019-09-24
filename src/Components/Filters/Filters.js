@@ -10,7 +10,7 @@ class Filters extends React.Component {
         <input className="App-input" type="text" value={userInput} onChange={getUserInput} placeholder="Buscar por nombre"/>
       <div>
         <label htmlFor="gender" id="gender" >Gender:  </label>
-        <select name="gender" id="gender" onChange={getUserSelect}>
+        <select name="gender" id="gender" onChange={getUserSelect} className="select-filter">
           <option value="Todos">All</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
