@@ -63,10 +63,12 @@ class App extends React.Component {
 
           <Route path="/charapter-detail/:chapId" render={routerProps => {
             return (
+              
               <CharapterDetail 
                 routerProps={routerProps}
                 charapters={charapters}
               />
+            
             );
           }}/>
 

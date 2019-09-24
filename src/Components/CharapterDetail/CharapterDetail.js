@@ -12,6 +12,7 @@ const CharapterDetail = props => {
     const { name, image, status, species, origin, episode } = charapter[0];
     return (
       <React.Fragment>
+      
         <div className="detail-container">
           <div className="detail-img-container">
             <img className="detail-img" src={image} alt={name} />
@@ -19,16 +20,19 @@ const CharapterDetail = props => {
           <div className="detail-charapter-container">
             <h3 className="detail-title">{`${name}`}</h3>
             <ul>
-              <li className={`detail-li ${(status === 'Alive') ? '' : 'hidden'}`}>Status: <i className="fas fa-heart"></i> </li>
-              <li className={`detail-li ${(status === 'Dead') ? '' : 'hidden'}`}>Status: <i className="fas fa-skull-crossbones"></i></li>
-              <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>Status: <i className="fas fa-question-circle"></i></li>
-              <li className="detail-li">{`Species: ${species}`}</li>
+              <li className={`detail-li ${(status === 'Alive') ? '' : 'hidden'}`}>{`Status: ${status} `}<i className="fas fa-heart"></i> </li>
+              <li className={`detail-li ${(status === 'Dead') ? '' : 'hidden'}`}>{`Status: ${status} `}<i className="fas fa-skull-crossbones"></i></li>
+              
+              <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>{`Status: Unknown `}<i className="fas fa-question-circle"></i></li>
+              {(species === 'Alien') ? <li className="detail-li">{`Species: ${species} `}<i class="fab fa-reddit-alien"></i></li> : <li className="detail-li">{`Species: ${species}`}</li>}
+              {/*<li className="detail-li">{`Species: ${species}`}</li>*/}
               <li className="detail-li">{`Origin: ${origin.name}`}</li>
               <li className="detail-li">{`Episodes: ${episode.length}`}</li>
             </ul>
           </div>
           <Link to="/" className="app__back">{'<  Volver'}</Link>
         </div>
+        
       </React.Fragment>
     );
     } else {
