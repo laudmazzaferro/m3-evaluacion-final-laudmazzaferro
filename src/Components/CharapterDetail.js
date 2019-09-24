@@ -15,12 +15,12 @@ const CharapterDetail = props => {
           <div className="detail-img-container">
             <img className="detail-img" src={image} alt={name} />
           </div>
-          <div lassName="detail-charapter-container">
+          <div className="detail-charapter-container">
             <h3 className="detail-title">{`${name}`}</h3>
             <ul>
-              <li className={`detail-li ${(status === 'Alive') ? '' : 'hidden'}`}>Status: <i class="fas fa-heart"></i> </li>
-              <li className={`detail-li ${(status === 'Dead') ? '' : 'hidden'}`}>Status: <i class="fas fa-skull-crossbones"></i></li>
-              <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>Status: <i class="fas fa-question-circle"></i></li>
+              <li className={`detail-li ${(status === 'Alive') ? '' : 'hidden'}`}>Status: <i className="fas fa-heart"></i> </li>
+              <li className={`detail-li ${(status === 'Dead') ? '' : 'hidden'}`}>Status: <i className="fas fa-skull-crossbones"></i></li>
+              <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>Status: <i className="fas fa-question-circle"></i></li>
               <li className="detail-li">{`Species: ${species}`}</li>
               <li className="detail-li">{`Origin: ${origin.name}`}</li>
               <li className="detail-li">{`Episodes: ${episode.length}`}</li>
@@ -29,16 +29,15 @@ const CharapterDetail = props => {
           <Link to="/" className="app__back">{'<  Volver'}</Link>
         </div>
       </React.Fragment>
-
     );
-  } else {
-    return (
-      <React.Fragment>
-        <p>Personaje no existente</p>
-        <Link to="/" className="app__back">Volver al listado</Link>
-      </React.Fragment>
-    )
-  }
+    } else {
+      return (
+        <React.Fragment>
+          <p>Personaje no existente</p>
+          <Link to="/" className="app__back">Volver al listado</Link>
+        </React.Fragment>
+      )
+    }
 }
 
 CharapterDetail.propTypes = {

@@ -31,7 +31,10 @@ background-color: black
     padding-top:100px;
     overflow:hidden;
     margin: 0px auto 20px auto ;
-    width:400px;
+    width: 300px;
+    @media all and (min-width:768px) {
+        width:400px; 
+    }
   }
 .charapterList{
     display: grid;
@@ -93,13 +96,25 @@ background-color: black
 }
 
 .detail-container{
-    width: 600px;
+    width: 300px;
     background-color: rgb(98,174,200);
-    margin: 30px auto 0px auto;
+    margin: 40px auto 0px auto;
+    padding-bottom: 20px;
     border-radius: 15px;
     display: flex;
     align-items: center;
     position: relative;
+    flex-direction: column;
+    @media all and (min-width:768px) {
+        flex-direction: row;
+        width: 600px;
+        padding-bottom: 0px;
+    }
+    /*@media all and (min-width:1200px) {
+        flex-direction: row;
+        width: 600px;
+        padding-bottom: 0px;
+    }*/
 }
 .detail-li{
     list-style: none;
@@ -114,6 +129,13 @@ background-color: black
 }
 .detail-img-container{
     margin: 20px;
+}
+.detail-img{
+    width: 250px;
+    border-radius: 10px;
+    @media all and (min-width:768px) {
+        width: 300px;
+    }
 }
 .hidden{
     display: none;

@@ -32,7 +32,8 @@ class CharapterList extends React.Component {
 }
 
 CharapterList.propTypes = {
-  charapters: PropTypes.arrayOf(PropTypes.object).isRequired
+  charapters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  userInput:PropTypes.string
 };
 
 export default CharapterList;
