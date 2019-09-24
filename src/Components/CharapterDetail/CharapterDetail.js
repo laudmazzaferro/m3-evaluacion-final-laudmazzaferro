@@ -25,7 +25,6 @@ const CharapterDetail = props => {
               
               <li className={`detail-li ${(status === 'unknown') ? '' : 'hidden'}`}>{`Status: Unknown `}<i className="fas fa-question-circle"></i></li>
               {(species === 'Alien') ? <li className="detail-li">{`Species: ${species} `}<i class="fab fa-reddit-alien"></i></li> : <li className="detail-li">{`Species: ${species}`}</li>}
-              {/*<li className="detail-li">{`Species: ${species}`}</li>*/}
               <li className="detail-li">{`Origin: ${origin.name}`}</li>
               <li className="detail-li">{`Episodes: ${episode.length}`}</li>
             </ul>
