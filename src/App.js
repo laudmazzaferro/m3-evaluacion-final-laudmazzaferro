@@ -13,10 +13,12 @@ class App extends React.Component {
     this.state = {
       charapters: [],
       userInput: '',
-      selectValue:'Todos'
+      selectValue:'Todos',
+      radioValue:'All'
     }
     this.getUserInput = this.getUserInput.bind(this);
     this.getUserSelect = this.getUserSelect.bind(this);
+    this.getUserRadio = this.getUserRadio.bind(this);
   }
   componentDidMount() {
     this.getCharapters();
@@ -42,9 +44,15 @@ class App extends React.Component {
       selectValue:newSelectValue
     })
   }
+  getUserRadio(event){
+    const newRadioValue = event.currentTarget.value;
+    this.setState({
+      radioValue:newRadioValue
+    })
+  }
 
   render() {
-    const { charapters, userInput ,selectValue} = this.state
+    const { charapters, userInput ,selectValue, radioValue} = this.state
     return (
       <div className="App">
         
@@ -60,11 +68,14 @@ class App extends React.Component {
                   userInput={userInput}
                   getUserInput={this.getUserInput}
                   getUserSelect={this.getUserSelect}
+                  getUserRadio={this.getUserRadio}
+                  radioValue={radioValue}
                 />
                 <CharapterList
                   charapters={charapters}
                   userInput={userInput}
                   selectValue={selectValue}
+                  radioValue={radioValue}
                 />
               </div>
             );

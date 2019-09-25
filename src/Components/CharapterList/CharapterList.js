@@ -7,7 +7,7 @@ import './CharapterList.scss'
 class CharapterList extends React.Component {
   
   render() {
-    const { charapters, userInput ,selectValue} = this.props
+    const { charapters, userInput ,selectValue, radioValue} = this.props
     return (
       <div className="App-main-container">
       <ol className="charapterList">
@@ -15,6 +15,7 @@ class CharapterList extends React.Component {
         {charapters
         .filter(charapter => charapter.name.toUpperCase().includes(userInput.toUpperCase()))
         .filter(charapter =>(selectValue === 'Todos') ||  charapter.gender === selectValue )
+        .filter(charapter =>(radioValue === 'All') ||  charapter.species === radioValue )
         .map(charapter => {
           return (
             <li className="charapter" key={charapter.id}>
@@ -35,7 +36,8 @@ class CharapterList extends React.Component {
 
 CharapterList.propTypes = {
   charapters: PropTypes.arrayOf(PropTypes.object).isRequired,
-  userInput:PropTypes.string
+  userInput:PropTypes.string.isRequired,
+  radioValue:PropTypes.string.isRequired
 };
 
 export default CharapterList;

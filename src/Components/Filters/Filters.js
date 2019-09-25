@@ -4,7 +4,7 @@ import './Filters.scss';
 
 class Filters extends React.Component {
   render() {
-    const {userInput,getUserInput,getUserSelect} = this.props
+    const {userInput,getUserInput,getUserSelect ,getUserRadio, radioValue} = this.props
     return(
       <div className="App-input-container">
         <input className="App-input" type="text" value={userInput} onChange={getUserInput} placeholder="Buscar por nombre"/>
@@ -17,6 +17,17 @@ class Filters extends React.Component {
           <option value="unknown">Unknown</option>
         </select>
       </div>
+      <div>
+        <label htmlFor="specie">All
+        <input type="radio" name="specie" value="All" checked={radioValue==='All'} onClick={getUserRadio}/>
+        </label>
+        <label htmlFor="specie" name="specie">Alien
+        <input type="radio" name="specie" value="Alien" checked={radioValue==='Alien'} onClick={getUserRadio}/>
+        </label>
+        <label htmlFor="specie" name="specie">Human
+        <input type="radio" name="specie" value="Human" checked={radioValue==='Human'} onClick={getUserRadio}/>
+        </label>
+      </div>
       </div>
     );
   }
@@ -24,6 +35,8 @@ class Filters extends React.Component {
 
 Filters.propTypes = {
   userInput:PropTypes.string.isRequired,
-  getUserInput:PropTypes.func.isRequired
+  getUserInput:PropTypes.func.isRequired,
+  getUserRadio:PropTypes.func.isRequired,
+  radioValue:PropTypes.string.isRequired,
 };
 export default Filters;
