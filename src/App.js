@@ -70,6 +70,7 @@ class App extends React.Component {
                   getUserSelect={this.getUserSelect}
                   getUserRadio={this.getUserRadio}
                   radioValue={radioValue}
+                  selectValue={selectValue}
                 />
                 <CharapterList
                   charapters={charapters}
