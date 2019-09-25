@@ -4,10 +4,11 @@ import './Filters.scss';
 
 class Filters extends React.Component {
   render() {
-    const {userInput,getUserInput,getUserSelect} = this.props
+    const {userInput,getUserInput,getUserSelect, getUserNumber, userNumber} = this.props
     return(
       <div className="App-input-container">
         <input className="App-input" type="text" value={userInput} onChange={getUserInput} placeholder="Buscar por nombre"/>
+        <input type="number" vulue={userNumber} onChange={getUserNumber} placeholder="Buscar por numero de episodio"/>
       <div>
         <label htmlFor="gender" id="gender" >Gender:  </label>
         <select name="gender" id="gender" onChange={getUserSelect} className="select-filter">
@@ -24,6 +25,8 @@ class Filters extends React.Component {
 
 Filters.propTypes = {
   userInput:PropTypes.string.isRequired,
-  getUserInput:PropTypes.func.isRequired
+  getUserInput:PropTypes.func.isRequired,
+  getUserNumber:PropTypes.func.isRequired,
+  userNumber:PropTypes.string.isRequired
 };
 export default Filters;

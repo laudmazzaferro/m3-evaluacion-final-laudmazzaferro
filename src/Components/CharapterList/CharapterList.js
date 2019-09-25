@@ -7,13 +7,14 @@ import './CharapterList.scss'
 class CharapterList extends React.Component {
   
   render() {
-    const { charapters, userInput ,selectValue} = this.props
+    const { charapters, userInput ,selectValue, userNumber} = this.props
     return (
       <div className="App-main-container">
       <ol className="charapterList">
         
         {charapters
         .filter(charapter => charapter.name.toUpperCase().includes(userInput.toUpperCase()))
+        .filter(charapter => (userNumber === '') || charapter.episode.length === parseInt(userNumber))
         .filter(charapter =>(selectValue === 'Todos') ||  charapter.gender === selectValue )
         .map(charapter => {
           return (

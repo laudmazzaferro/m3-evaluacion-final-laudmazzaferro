@@ -13,6 +13,7 @@ class CharapterCard extends React.Component {
         <div className="card__name-specie">
           <h2 className="card__name">{charapter.name}</h2>
           <p className="card__specie">{charapter.species}</p>
+          <p>{charapter.episode.length}</p>
         </div>
       </div>
     );
