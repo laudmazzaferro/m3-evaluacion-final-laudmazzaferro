@@ -13,10 +13,12 @@ class App extends React.Component {
     this.state = {
       charapters: [],
       userInput: '',
-      selectValue:'Todos'
+      selectValue:'Todos',
+      statusValue:'Todos'
     }
     this.getUserInput = this.getUserInput.bind(this);
     this.getUserSelect = this.getUserSelect.bind(this);
+    this.getUserStatus = this.getUserStatus.bind(this);
   }
   componentDidMount() {
     this.getCharapters();
@@ -37,14 +39,20 @@ class App extends React.Component {
     })
   }
   getUserSelect(event){
-    let newSelectValue = event.currentTarget.value;
+    const newSelectValue = event.currentTarget.value;
     this.setState({
       selectValue:newSelectValue
     })
   }
+  getUserStatus(event){
+    const newStatusValue = event.currentTarget.value;
+    this.setState({
+      statusValue: newStatusValue
+    })
+  }
 
   render() {
-    const { charapters, userInput ,selectValue} = this.state
+    const { charapters, userInput ,selectValue, statusValue} = this.state
     return (
       <div className="App">
         
@@ -60,11 +68,13 @@ class App extends React.Component {
                   userInput={userInput}
                   getUserInput={this.getUserInput}
                   getUserSelect={this.getUserSelect}
+                  getUserStatus={this.getUserStatus}
                 />
                 <CharapterList
                   charapters={charapters}
                   userInput={userInput}
                   selectValue={selectValue}
+                  statusValue ={statusValue}
                 />
               </div>
             );

@@ -15,7 +15,8 @@ class Footer extends React.Component {
           <a
             className="footer__link"
             href="https://adalab.es/"
-            target="blank"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <img
               className="footer__logo"
