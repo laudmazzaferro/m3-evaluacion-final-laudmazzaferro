@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import CharapterCard from './../CharapterCard/CharapterCard';
+import CharapterCard from '../CharapterCard';
 import {Link} from 'react-router-dom'
-import './CharapterList.scss'
+import './index.scss'
 
 class CharapterList extends React.Component {
   

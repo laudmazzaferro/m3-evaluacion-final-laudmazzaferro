@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './CharapterCard.scss'
+import './index.scss'
 
 class CharapterCard extends React.Component {
   render() {

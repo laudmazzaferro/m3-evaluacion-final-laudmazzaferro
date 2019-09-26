@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
 import { fetchCharapters } from './services/fetchCharapters'
-import CharapterList from './Components/CharapterList/CharapterList'
-import Filters from './Components/Filters/Filters'
+import CharapterList from './Components/CharapterList'
+import Filters from './Components/Filters'
 import { Switch, Route } from 'react-router-dom';
-import CharapterDetail from './Components/CharapterDetail/CharapterDetail';
-import Footer from './Components/Footer/Footer';
+import CharapterDetail from './Components/CharapterDetail';
+import Footer from './Components/Footer';
 
 class App extends React.Component {
   constructor(props) {
